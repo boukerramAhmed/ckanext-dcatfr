@@ -36,6 +36,7 @@ publish:
   stage: publish
   variables:
     CI_PROJECT_EXT_PATH : $CI_PROJECT_PATH
+    CI_GITHUB_PROJECT_PATH: "boukerramAhmed/ckanext-dcatfr"
   trigger:
         project: ckan-mtes/gd-bastion
         branch: prod
