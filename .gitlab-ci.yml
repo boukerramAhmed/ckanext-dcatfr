@@ -35,7 +35,7 @@ publish:
   stage: publish
   trigger:
         project: ckan-mtes/gd-bastion
-        branch: publish
+        branch: prod
         strategy: depend
 
 
