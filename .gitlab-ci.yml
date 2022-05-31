@@ -1,7 +1,24 @@
 
-stages:          # List of stages for jobs, and their order of execution
+stages:
+  - test
+  - quality          # List of stages for jobs, and their order of execution
   - deploy
+  - publish
 
+test-unit:
+  stage: test
+  script:
+    - echo "stage -> ${CI_JOB_STAGE} \t job ->  ${CI_JOB_NAME}"
+
+quality-sonarqube:
+  stage: quality
+  script: 
+    - echo "stage -> ${CI_JOB_STAGE} \t job ->  ${CI_JOB_NAME}"
+
+quality-security-check:
+  stage: quality
+  script: 
+    - echo "stage -> ${CI_JOB_STAGE} \t job ->  ${CI_JOB_NAME}"
 
 
 deploy:      
@@ -12,4 +29,12 @@ deploy:
         project: ckan-mtes/gd-bastion
         branch: develop
         strategy: depend
+
+publish:
+  stage: publish
+  trigger:
+        project: ckan-mtes/gd-bastion
+        branch: publish
+        strategy: depend
+
 
