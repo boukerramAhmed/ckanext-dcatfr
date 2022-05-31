@@ -4,8 +4,10 @@ stages:          # List of stages for jobs, and their order of execution
 
 
 
-deploy:      # This job runs in the deploy stage.
-  stage: deploy  # It only runs when *both* jobs in the test stage complete successfully.
+deploy:      
+  stage: deploy 
+  variables:
+    CKAN_EXT="ckanext-dsfr" 
   trigger:
         project: ckan-mtes/gd-bastion
         branch: master
