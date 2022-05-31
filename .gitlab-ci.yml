@@ -30,6 +30,7 @@ deploy:
         branch: develop
         strategy: depend
 
+
 publish:
   stage: publish
   trigger:
