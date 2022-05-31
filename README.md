@@ -1,5 +1,4 @@
-# ckanext-dcatfr
-
+# ckanext-dcatfr cicd
 extension dcatfr pour ckan
 
 ## Getting started
