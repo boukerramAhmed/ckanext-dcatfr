@@ -7,7 +7,7 @@ stages:          # List of stages for jobs, and their order of execution
 deploy:      
   stage: deploy 
   variables:
-    CKAN_EXT="ckanext-dsfr" 
+    CKAN_EXT : "ckanext-dsfr" 
   trigger:
         project: ckan-mtes/gd-bastion
         branch: develop
