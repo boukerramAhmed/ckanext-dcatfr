@@ -10,6 +10,6 @@ deploy:
     CKAN_EXT="ckanext-dsfr" 
   trigger:
         project: ckan-mtes/gd-bastion
-        branch: master
+        branch: develop
         strategy: depend
 
