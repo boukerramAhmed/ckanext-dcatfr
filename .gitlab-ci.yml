@@ -35,7 +35,7 @@ deploy:
 publish:
   stage: publish
   variables:
-    - CI_PROJECT_EXT_PATH : $CI_PROJECT_PATH
+    CI_PROJECT_EXT_PATH : $CI_PROJECT_PATH
   trigger:
         project: ckan-mtes/gd-bastion
         branch: prod
