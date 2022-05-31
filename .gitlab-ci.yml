@@ -19,6 +19,7 @@ quality-security-check:
   stage: quality
   script: 
     - echo "stage -> ${CI_JOB_STAGE} \t job ->  ${CI_JOB_NAME}"
+    - echo $CI_PROJECT_PATH
 
 
 deploy:      
@@ -33,6 +34,8 @@ deploy:
 
 publish:
   stage: publish
+  variables:
+    - CI_PROJECT_EXT_PATH : $CI_PROJECT_PATH
   trigger:
         project: ckan-mtes/gd-bastion
         branch: prod
