@@ -1,4 +1,4 @@
-# ckanext-dcatfr cicd
+# ckanext-dcatfr cicd mercredi
 extension dcatfr pour ckan
 
 ## Getting started
